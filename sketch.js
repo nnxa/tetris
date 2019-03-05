@@ -1,9 +1,5 @@
 // TETRIS CLONE IN P5.JS
-//
-// TODO LIST:
-// Bag system
-// Full set of super rotations
-// Speed up when framerate lag
+// https://github.com/nnxa/tetris
 //
 // Credits:
 // Font: Copyright (c) 2011, Cody "CodeMan38" Boisclair (cody@zone38.net), with Reserved Font Name "Press Start".
