@@ -11,7 +11,7 @@ const PANEL_WIDTH = 200;
 const PANEL_HEIGHT = 300;
 
 const CELLSIZE = 11;
-const GRID_WIDTH = 10;
+const GRID_WIDTH = 10; 
 const GRID_HEIGHT = 40;
 const VISIBLE_GRID_HEIGHT = 20;
 
@@ -101,28 +101,29 @@ const TETRIMINO = [
                         0,0,0],
                 clockwise_centres:      [{x: 0, y: 0}],
                 anticlockwise_centres:  [{x: 0, y: 0}]}],
-    color: [255, 255, 0]},
+    color: [7, 47, 95]},
+    //custom shape 
    {size: 4,
     rotation: [{shape: [0,0,0,0,
                         1,1,1,1,
-                        0,0,0,0,
-                        0,0,0,0],
+                        0,0,1,0,
+                        0,0,0,0,],
                 clockwise_centres:     [{x: 0, y: 0}, {x: -2, y: 0}, {x: +1, y: 0}, {x: -2, y: +1}, {x: +1, y: -2}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: -1, y: 0}, {x: +2, y: 0}, {x: -1, y: -2}, {x: +2, y: +1}]},
                {shape: [0,0,1,0,
                         0,0,1,0,
-                        0,0,1,0,
+                        0,1,1,0,
                         0,0,1,0,],
                 clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: +2, y: 0}, {x: -1, y: -2}, {x: +2, y: +1}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: +2, y: 0}, {x: -1, y: 0}, {x: -2, y: +1}, {x: -1, y: +2}]},
                {shape: [0,0,0,0,
-                        0,0,0,0,
+                        0,1,0,0,
                         1,1,1,1,
                         0,0,0,0],
                 clockwise_centres:     [{x: 0, y: 0}, {x: +2, y: 0}, {x: -1, y: 0}, {x: +2, y: -1}, {x: -1, y: +2}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: +1, y: 0}, {x: -2, y: 0}, {x: +1, y: +2}, {x: -2, y: +1}]},
                {shape: [0,1,0,0,
-                        0,1,0,0,
+                        0,1,1,0,
                         0,1,0,0,
                         0,1,0,0],
                 clockwise_centres:     [{x: 0, y: 0}, {x: +1, y: 0}, {x: -2, y: 0}, {x: +1, y: +2}, {x: -2, y: -1}],
@@ -150,7 +151,7 @@ const TETRIMINO = [
                         0,1,0],
                 clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}]}],
-    color: [255, 0, 255]},
+    color: [18, 97, 160]},
 
    {size: 3,
     rotation: [{shape: [0,0,1,
@@ -173,25 +174,25 @@ const TETRIMINO = [
                         0,1,0],
                 clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}]}],
-     color: [255, 165, 0]},
-
+     color: [88, 204, 237]},
+    // custom shape 3 L
     {size: 3,
-     rotation: [{shape: [1,0,0,
-                         1,1,1,
+     rotation: [{shape: [0,1,0,
+                         0,1,1,
                          0,0,0],
                     clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: -1}, {x: 0, y: +2}, {x: -1, y: +2}],
                     anticlockwise_centres: [{x: 0, y: 0}, {x: +1, y: 0}, {x: +1, y: -1}, {x: 0, y: +2}, {x: +1, y: +2}]},
                    {shape: [0,1,1,
                             0,1,0,
-                            0,1,0],
+                            0,0,0],
                     clockwise_centres:     [{x: 0, y: 0}, {x: +1, y: 0}, {x: +1, y: +1}, {x: +0, y: -2}, {x: +1, y: -2}],
                     anticlockwise_centres: [{x: 0, y: 0}, {x: +1, y: 0}, {x: +1, y: +1}, {x: +0, y: -2}, {x: +1, y: -2}]},
                    {shape: [0,0,0,
-                            1,1,1,
+                            0,1,1,
                             0,0,1],
                     clockwise_centres:     [{x: 0, y: 0}, {x: +1, y: 0}, {x: 0, y: +2}, {x: 0, y: +2}, {x: +1, y: +2}],
                     anticlockwise_centres: [{x: 0, y: 0}, {x: -1, y: 0}, {x: 0, y: +2}, {x: 0, y: +2}, {x: -1, y: +2}]},
-                   {shape: [0,1,0,
+                   {shape: [0,0,0,
                             0,1,0,
                             1,1,0],
                     clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}],
@@ -218,7 +219,7 @@ const TETRIMINO = [
                         0,1,0],
                 clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: +2}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: +2}]}],
-   color: [0, 255, 0]},
+   color: [56, 149, 211]},
    {size: 3,
     rotation: [{shape: [1,1,0,
                         0,1,1,
@@ -240,12 +241,14 @@ const TETRIMINO = [
                         1,0,0],
                 clockwise_centres:     [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}],
                 anticlockwise_centres: [{x: 0, y: 0}, {x: -1, y: 0}, {x: -1, y: +1}, {x: 0, y: +2}, {x: -1, y: -2}]}],
-      color: [255, 0, 0]},
+      color: [123, 104, 238]},
      {color: [255,255,255]} // create a dummy entry for filling the grid with white blocks for the game over animation
   ];
 
  function preload() {
    myFont = loadFont('fonts/press-start-2p/PressStart2P.ttf');
+   docker = loadImage('docker.png');  
+   dockergif = loadImage('docker.gif');
  }
 
 function setup() {
@@ -277,8 +280,6 @@ function resetGame() {
   timeToDrop = dropTime();
   score = 0;
   generateTetrimino();
-
-
  }
 
 function draw() {
@@ -527,7 +528,10 @@ function draw() {
   text(level, GRID_WIDTH * CELLSIZE + 4 + BOARD_X, BOARD_Y + 42);
   text('SCORE', GRID_WIDTH * CELLSIZE + 4 + BOARD_X, BOARD_Y+56);
   text(score, GRID_WIDTH * CELLSIZE + 4 + BOARD_X, BOARD_Y + 66);
-
+  //Docker image and text
+  image(docker, BOARD_X +15, BOARD_Y-30,20,20);
+  // image(docker, BOARD_X, BOARD_Y+40, 150,150);
+  text('DOCKER', 6, BOARD_Y-15);
   // draw "next" tetrimino
   text('NEXT', 6, BOARD_Y+8);
   noStroke();
@@ -583,6 +587,8 @@ function draw() {
      textSize(8);
      if (animationFrame == 0) {
        text('PLAY AGAIN', PANEL_WIDTH / 2 - 40, PANEL_HEIGHT / 2 + 8);
+       image(dockergif, PANEL_WIDTH / 2 - 20, PANEL_HEIGHT / 2 + 8,40,40);
+
      }
   }
 
