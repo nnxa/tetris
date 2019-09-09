@@ -249,6 +249,7 @@ const TETRIMINO = [
    myFont = loadFont('fonts/press-start-2p/PressStart2P.ttf');
    docker = loadImage('docker.png');  
    dockergif = loadImage('docker.gif');
+   bottom = loadImage('dockerbase.png');
  }
 
 function setup() {
@@ -530,7 +531,7 @@ function draw() {
   text(score, GRID_WIDTH * CELLSIZE + 4 + BOARD_X, BOARD_Y + 66);
   //Docker image and text
   image(docker, BOARD_X +15, BOARD_Y-30,20,20);
-  // image(docker, BOARD_X, BOARD_Y+40, 150,150);
+  image(bottom, BOARD_X -35, BOARD_Y+150, 190,133);
   text('DOCKER', 6, BOARD_Y-15);
   // draw "next" tetrimino
   text('NEXT', 6, BOARD_Y+8);
