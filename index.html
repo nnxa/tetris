@@ -5,9 +5,35 @@
     <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
     <title>Tetris</title>
     <style> body {padding: 0; margin: 0; height: 100%; overflow: hidden; width: 100%; position: fixed; } </style>
-    <script src="p5.min.js"></script>
-    <script src="sketch.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- <script src="p5.min.js"></script> -->
+    <!-- <script src="sketch.js"></script> -->
   </head>
+  <style>
+      body{
+        font-family: 'Press Start 2P', cursive;
+        background: #121212;
+        color: white;
+        text-align: center;
+      }
+      h1{
+          font-family: 'Press Start 2P', cursive;
+          color: white;
+          /* text-align: center; */
+          position: relative;
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+      }
+      a{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+  </style>
   <body>
+    <h1> Click to start game </h1>
+    <h2><a href="tetris-game" target="_blank">Tetris</a></h2>
   </body>
 </html>
